@@ -1,0 +1,24 @@
+{
+  "name": "x402-agent-starter-ts",
+  "version": "0.1.0",
+  "description": "Starter for a paid agent listed on LAX: one route priced in USDC over x402 (exact scheme, Base).",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "tsx src/server.ts",
+    "list-offer": "tsx scripts/list-offer.ts",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "viem": "2.21.54"
+  },
+  "devDependencies": {
+    "@types/node": "20.17.10",
+    "tsx": "4.19.2",
+    "typescript": "5.7.2",
+    "vitest": "2.1.8"
+  }
+}

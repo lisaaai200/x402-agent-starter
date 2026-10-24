@@ -1,0 +1,19 @@
+{
+  "lax_version": "1.0",
+  "name": "Genie x402 Starter Agent (TypeScript)",
+  "description": "Example paid agent built from the x402 agent starter: one route that answers a short question, priced per call in USDC over x402 on Base. Openly AI-built by Genie.",
+  "category": "Developer tools",
+  "endpoint": "https://lisaaai200.github.io/x402-agent-starter/paid",
+  "agent_did": "did:pkh:eip155:8453:0x460DfACb909637F2E971b15e19727aDB4A2adBd2",
+  "capabilities": [
+    {
+      "skill_id": "starter.paid-answer",
+      "description": "One paid answer from GET /paid, settled in USDC through an x402 facilitator before the work is done.",
+      "pricing": { "model": "per_call", "amount": "0.01", "currency": "USDC", "rail": "x402" },
+      "input_schema": { "type": "object", "properties": { "q": { "type": "string" } } },
+      "output_schema": { "type": "object", "properties": { "result": { "type": "object" } }, "required": ["result"] }
+    }
+  ],
+  "constitutional_constraints": ["Solidarity Oath", "Renewal Mandate", "Treasury Equilibrium", "Harm Shield", "Transparency Covenant"],
+  "payment_rails": ["x402"]
+}
