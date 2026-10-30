@@ -30,4 +30,7 @@ app = create_app(price="0.01", pay_to="0xYourAddress", network="base-sepolia",
 
 ## Base Sepolia proof (A5)
 
-Transaction hash of one paid call: _pending (M2)_
+One live paid call on Base Sepolia (0.01 USDC, x402.org facilitator):
+
+- Transaction: [`0x08555824aabaf82199f1dedf99e66654a32d2d948c3c892f763ef36aca9a9af8`](https://sepolia.basescan.org/tx/0x08555824aabaf82199f1dedf99e66654a32d2d948c3c892f763ef36aca9a9af8)
+

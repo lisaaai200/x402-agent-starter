@@ -43,4 +43,7 @@ export default app; // Hono, Bun and workers accept { fetch }
 
 ## Base Sepolia proof (A5)
 
-Transaction hash of one paid call: _pending (M2)_
+One live paid call on Base Sepolia (0.01 USDC, x402.org facilitator):
+
+- Transaction: [`0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774`](https://sepolia.basescan.org/tx/0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774)
+

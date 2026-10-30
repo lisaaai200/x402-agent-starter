@@ -201,6 +201,10 @@ def test_a4_payer_refuses_over_limit():
 
 
 # A5
-@pytest.mark.skip(reason="A5: Base Sepolia transaction hash goes in the README with milestone M2")
 def test_a5_base_sepolia_paid_call():
-    pass
+    root = Path(__file__).resolve().parents[2] / "README.md"
+    local = Path(__file__).resolve().parents[1] / "README.md"
+    tx = "0x08555824aabaf82199f1dedf99e66654a32d2d948c3c892f763ef36aca9a9af8"
+    assert tx in root.read_text()
+    assert tx in local.read_text()
+    assert f"sepolia.basescan.org/tx/{tx}" in root.read_text()

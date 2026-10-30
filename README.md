@@ -9,8 +9,8 @@ Two starter templates for a **paid agent listed on LAX** (the Linked Agent eXcha
 
 | Folder | Stack | Tests |
 | --- | --- | --- |
-| [`typescript/`](typescript/) | Web standard `fetch(Request)` app (Node, Hono, Bun or a worker), viem for signing | vitest, 18 tests + 1 todo |
-| [`python/`](python/) | FastAPI, httpx, eth-account | pytest, 17 tests + 1 skipped |
+| [`typescript/`](typescript/) | Web standard `fetch(Request)` app (Node, Hono, Bun or a worker), viem for signing | vitest, 19 tests |
+| [`python/`](python/) | FastAPI, httpx, eth-account | pytest, 18 tests |
 
 All tests run **offline** with a mocked x402 facilitator and a mocked registry. Tests are named after the acceptance items they prove (A1 to A6).
 
@@ -39,13 +39,15 @@ Before you list, change `endpoint`, `name`, `description` and `agent_did` in `la
 | A2 verify, settle, 200 with X-PAYMENT-RESPONSE; failures get 402 and no work | done, tested (TS and Python) |
 | A3 offers pass LAX validation with the Five Laws | done, tested locally; the live registry also answers "Your offer is valid" for both offers (checked with an unpaid call, nothing listed or paid) |
 | A4 listing script answers the 402, pays through the given function, returns the id, no key logged | done, tested (TS and Python) |
-| A5 Base Sepolia paid call per starter, transaction hash here | pending (milestone M2) |
+| A5 Base Sepolia paid call per starter, transaction hash here | done |
 | A6 Python starter mirrors A1 to A4 with pytest | done |
 
 ### Base Sepolia proofs (A5)
 
-- TypeScript starter: _pending_
-- Python starter: _pending_
+Live paid calls on Base Sepolia through `https://x402.org/facilitator` (facilitator pays gas; payer signed EIP-3009 only). Price 0.01 USDC each. Funded from the free Circle faucet (testnet USDC only).
+
+- TypeScript starter: [`0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774`](https://sepolia.basescan.org/tx/0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774)
+- Python starter: [`0x08555824aabaf82199f1dedf99e66654a32d2d948c3c892f763ef36aca9a9af8`](https://sepolia.basescan.org/tx/0x08555824aabaf82199f1dedf99e66654a32d2d948c3c892f763ef36aca9a9af8)
 
 ## License
 

@@ -23,7 +23,13 @@ describe("A3 the offer passes LAX validation with the Five Laws", () => {
 });
 
 describe("A5 paid call on Base Sepolia", () => {
-  it.todo("A5 README holds the Base Sepolia transaction hash of one paid call (added with M2)");
+  it("A5 README holds the Base Sepolia transaction hash of one paid call", () => {
+    const root = readFileSync(new URL("../../README.md", import.meta.url), "utf8");
+    const local = readFileSync(new URL("../README.md", import.meta.url), "utf8");
+    expect(root).toMatch(/0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774/);
+    expect(local).toMatch(/0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774/);
+    expect(root).toMatch(/sepolia\.basescan\.org\/tx\/0xbb597078294187f0ba06261ac2daab8f6586f6fa15153ce2c49c8733e9672774/);
+  });
 });
 
 describe("A6 the Python starter mirrors A1 to A4", () => {
